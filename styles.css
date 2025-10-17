@@ -139,6 +139,7 @@ body {
   grid-template-columns: 50px 50px 20px 50px 50px 20px 50px 50px 50px 50px;
   grid-template-rows: 50px 50px 50px;
   justify-items: center;
+  margin: var(--pad-l);
   /* grid-template-areas:
     "m1 m2 slash1 d1 d2 slash2 y1 y2 y3 y4"
     "mnum1 mnum2 . dnum1 dnum2 . ynum1 ynum2 ynum3 ynum4"
@@ -154,82 +155,89 @@ body {
   grid-row: 2 / 4;
 }
 
-/* .m1 {
-  grid-area: m1;
-}
-.m2 {
-  grid-area: m2;
-}
-.slash1 {
-  grid-area: slash1;
-}
-.d1 {
-  grid-area: d1;
-}
-.d2 {
-  grid-area: d2;
-}
-.slash2 {
-  grid-area: slash2;
-}
-.y1 {
-  grid-area: y1;
-}
-.y2 {
-  grid-area: y2;
-}
-.y3 {
-  grid-area: y3;
-}
-.y4 {
-  grid-area: y4;
+.nums {
+  margin: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  justify-self: stretch;
 }
 
-.mnum1 {
-  grid-area: mnum1;
+/* #m1 {
+  
 }
-.mnum2 {
-  grid-area: mnum2;
+#m2 {
+  
 }
-.dnum1 {
-  grid-area: dnum1;
+#slash1 {
+ 
 }
-.dnum2 {
-  grid-area: dnum2;
+#d1 {
+ 
 }
-.ynum1 {
-  grid-area: ynum1;
+#d2 {
+ 
 }
-.ynum2 {
-  grid-area: ynum2;
+#slash2 {
+ 
 }
-.ynum3 {
-  grid-area: ynum3;
+#y1 {
+
 }
-.ynum4 {
-  grid-area: ynum4;
+#y2 {
+  
 }
-.mlock1 {
-  grid-area: mlock1;
+#y3 {
+ 
 }
-.mlock2 {
-  grid-area: mlock2;
+#y4 {
+
 }
-.dlock1 {
-  grid-area: dlock1;
+
+#mnum1 {
+
 }
-.dlock2 {
-  grid-area: dlock2;
+#mnum2 {
+ 
 }
-.ylock1 {
-  grid-area: ylock1;
+#dnum1 {
+ 
 }
-.ylock2 {
-  grid-area: ylock2;
+#dnum2 {
+ 
 }
-.ylock3 {
-  grid-area: ylock3;
+#ynum1 {
+
 }
-.ylock4 {
-  grid-area: ylock4;
-} */
+#ynum2 {
+
+}
+#ynum3 {
+
+}
+#ynum4 {
+ 
+}
+#mlock1 {
+  
+}
+#mlock2 {
+ 
+}
+#dlock1 {
+  
+}
+#dlock2 {
+  
+}
+#ylock1 {
+  
+}
+#ylock2 {
+  
+}
+#ylock3 {
+  
+}
+#ylock4 {
+  
+}  */
