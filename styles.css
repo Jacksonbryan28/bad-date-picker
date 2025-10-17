@@ -1,5 +1,7 @@
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -23,18 +25,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -42,28 +57,60 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
+}
+
+* {
+  --clr-text: #ffffff;
+  --bg-frame: rgba(9, 6, 6, 0.681);
+  --pad-xs: 0.75em;
+  --pad-s: 1em;
+  --pad-m: 1.25em;
+  --pad-l: 1.5em;
+  --pad-xl: 2em;
 }
 
 .container {
   display: grid;
-  grid: 80vh / 2fr 1fr;
+  grid: calc(100vh - (var(--pad-xl, 1.25em) * 2)) / minmax(500px, 1fr) minmax(
+      300px,
+      500px
+    );
+  /* grid: calc(100vh - 2em) / 2fr 1fr; */
+
+  padding: var(--pad-xl, 1em);
+  gap: var(--pad-m, 1.25em);
 }
 
-.gridchild {
-  border: 1px solid black;
-}
-
+.lgrid,
 .sidepanel {
-  background-color: rgba(9, 6, 6, 0.681);
+  border: 5px solid var(--clr-text, white);
+  background-color: var(--bg-frame, black);
+  color: var(--clr-text, white);
+  padding: 1em;
+
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+}
+
+.lgrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
@@ -74,17 +121,115 @@ body {
   backdrop-filter: blur(4px);
 }
 
-.spGrid {
-  display: grid;
-  grid: 100px 100px 100px / 100px 100px 100px;
-
-  background-color: rgba(9, 6, 6, 0.681);
-  background-image: url(images/unknownbg.png);
-}
-
 .colored {
-  background-color: rgba(9, 6, 6, 0.681);
+  background-color: var(--bg-frame, #000000);
 }
 .empty {
   border: 5px white solid;
 }
+
+.legend {
+  display: grid;
+}
+
+.datewrapergrid {
+  display: grid;
+  /* grid: repeat(3, 50px) / repeat(10, 50px); */
+
+  grid-template-columns: 50px 50px 20px 50px 50px 20px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  justify-items: center;
+  /* grid-template-areas:
+    "m1 m2 slash1 d1 d2 slash2 y1 y2 y3 y4"
+    "mnum1 mnum2 . dnum1 dnum2 . ynum1 ynum2 ynum3 ynum4"
+    "mlock1 mlock2 . dlock1 dlock2 . ylock1 ylock2 ylock3 ylock4"; */
+}
+.skip1 {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+
+.skip2 {
+  grid-column: 6;
+  grid-row: 2 / 4;
+}
+
+/* .m1 {
+  grid-area: m1;
+}
+.m2 {
+  grid-area: m2;
+}
+.slash1 {
+  grid-area: slash1;
+}
+.d1 {
+  grid-area: d1;
+}
+.d2 {
+  grid-area: d2;
+}
+.slash2 {
+  grid-area: slash2;
+}
+.y1 {
+  grid-area: y1;
+}
+.y2 {
+  grid-area: y2;
+}
+.y3 {
+  grid-area: y3;
+}
+.y4 {
+  grid-area: y4;
+}
+
+.mnum1 {
+  grid-area: mnum1;
+}
+.mnum2 {
+  grid-area: mnum2;
+}
+.dnum1 {
+  grid-area: dnum1;
+}
+.dnum2 {
+  grid-area: dnum2;
+}
+.ynum1 {
+  grid-area: ynum1;
+}
+.ynum2 {
+  grid-area: ynum2;
+}
+.ynum3 {
+  grid-area: ynum3;
+}
+.ynum4 {
+  grid-area: ynum4;
+}
+.mlock1 {
+  grid-area: mlock1;
+}
+.mlock2 {
+  grid-area: mlock2;
+}
+.dlock1 {
+  grid-area: dlock1;
+}
+.dlock2 {
+  grid-area: dlock2;
+}
+.ylock1 {
+  grid-area: ylock1;
+}
+.ylock2 {
+  grid-area: ylock2;
+}
+.ylock3 {
+  grid-area: ylock3;
+}
+.ylock4 {
+  grid-area: ylock4;
+} */
