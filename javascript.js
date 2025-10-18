@@ -16,8 +16,6 @@ locks.forEach((lock) => {
   mouseInteractions(lock, isPressed);
 });
 
-
-
 rollBtn.addEventListener("click", () => {
   allData.allDisplayNums.forEach((num) => {
     num.textContent = Math.floor(Math.random() * 10);
@@ -47,10 +45,6 @@ function mouseInteractions(lock, isPressed) {
     }
   });
 }
-
-
-
-
 
 //Single # random number
 // rollBtn.addEventListener("click", () => {

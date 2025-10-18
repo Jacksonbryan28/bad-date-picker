@@ -138,6 +138,36 @@ h6 {
   font-family: "Orbitron";
 }
 
+.legend-grid {
+  display: grid;
+  grid: 50px 50px 50px / repeat(auto-fit, minmax(60px, 70px));
+  border: black solid 1px;
+  background-image: url(images/unknownbg.png);
+}
+
+.legend-grid-child {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  justify-self: stretch;
+  align-self: stretch;
+  background-color: var(--bg-frame, black);
+}
+
+.legend-grid-child-unknown {
+  padding: 6px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 0px 10px yellow inset;
+  margin-bottom: 20px;
+}
+
+.unknown {
+  font-family: "Stray";
+}
+
 body {
   background-image: url("images/bg-img.jpg");
   height: 100%;
