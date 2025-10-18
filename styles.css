@@ -162,7 +162,7 @@ body {
   /* grid: repeat(3, 50px) / repeat(10, 50px); */
 
   grid-template-columns: 50px 50px 20px 50px 50px 20px 50px 50px 50px 50px;
-  grid-template-rows: 50px 50px 50px;
+  grid-template-rows: 50px 60px 50px;
   justify-items: center;
   margin: var(--pad-l);
   /* grid-template-areas:
@@ -182,9 +182,27 @@ body {
 
 .nums {
   margin: 4px;
-  background-color: #fff;
+  background-color: #271527;
   border-radius: 4px;
   justify-self: stretch;
+}
+
+.lock-icon {
+  /* background-image: url(images/lock-icon.png);
+  width: 40px;
+  background-size: contain;
+  background-repeat: no-repeat; */
+  fill: burlywood;
+  width: 23px;
+  height: 32px;
+  background-image: url(images/lock-icon.svg);
+  margin-top: 4px;
+}
+.lock-icon:hover {
+  background-image: url(images/lock-icon-hover.svg);
+}
+.lock-icon:active {
+  background-image: url(images/lock-icon-selected.svg);
 }
 
 /* #m1 {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bad-Date-Picker</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
+    <!-- <link
       rel="preload"
       href="fonts/Stray.woff2"
       as="font"
@@ -32,7 +32,8 @@
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
-    />
+    /> -->
+    <script src="javascript.js"></script>
   </head>
   <body>
     <div class="container">
@@ -61,11 +62,11 @@
           <div class="nums" id="ynum3"><p>#</p></div>
           <div class="nums" id="ynum4"><p>#</p></div>
 
+          <div id="mlock1" class="lock-icon"></div>
           <div id="mlock2"><p>L</p></div>
           <div id="dlock1"><p>L</p></div>
           <div id="dlock2"><p>L</p></div>
           <div id="ylock1"><p>L</p></div>
-          <div id="mlock1"><p>L</p></div>
           <div id="ylock2"><p>L</p></div>
           <div id="ylock3"><p>L</p></div>
           <div id="ylock4"><p>L</p></div>
@@ -73,7 +74,7 @@
           <div class="skip1"></div>
           <div class="skip2"></div>
         </div>
-        <button>Roll</button>
+        <button id="rollBtn" class="roll">Roll</button>
       </div>
       <div class="sidepanel">
         <h2>Legend</h2>
