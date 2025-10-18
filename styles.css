@@ -193,12 +193,12 @@ body {
   background-image: url(images/lock-icon.svg);
   margin-top: 4px;
 }
-.lock-icon:hover {
+/* .lock-icon:hover {
   background-image: url(images/lock-icon-hover.svg);
 }
 .lock-icon:active {
   background-image: url(images/lock-icon-selected.svg);
-}
+} */
 
 /* #m1 {
   
