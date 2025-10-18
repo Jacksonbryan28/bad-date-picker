@@ -1,19 +1,33 @@
 const locks = document.querySelectorAll(".lock-icon");
 const rollBtn = document.querySelector("button");
 const num1 = document.querySelector("#num1");
+const nums = document.querySelectorAll(".nums");
 
 let randomNum = 0;
+
+const allData = {
+  allLocks: locks,
+  allDisplayNums: nums,
+  allRandomNums: 0,
+};
 
 locks.forEach((lock) => {
   let isPressed = false;
   mouseInteractions(lock, isPressed);
 });
 
+// rollBtn.addEventListener("click", () => {
+//   randomNum = Math.floor(Math.random() * 10);
+//   console.log(randomNum);
+//   num1.textContent = randomNum;
+//   return;
+// });
+
 rollBtn.addEventListener("click", () => {
-  randomNum = Math.floor(Math.random() * 10);
-  console.log(randomNum);
-  num1.textContent = randomNum;
-  return;
+  allData.allDisplayNums.forEach((num) => {
+    num.textContent = Math.floor(Math.random() * 10);
+    console.log(num + " num = " + num.textContent);
+  });
 });
 
 function mouseInteractions(lock, isPressed) {
