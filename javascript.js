@@ -1,8 +1,19 @@
 const locks = document.querySelectorAll(".lock-icon");
+const rollBtn = document.querySelector("button");
+const num1 = document.querySelector("#num1");
+
+let randomNum = 0;
 
 locks.forEach((lock) => {
   let isPressed = false;
   mouseInteractions(lock, isPressed);
+});
+
+rollBtn.addEventListener("click", () => {
+  randomNum = Math.floor(Math.random() * 10);
+  console.log(randomNum);
+  num1.textContent = randomNum;
+  return;
 });
 
 function mouseInteractions(lock, isPressed) {
@@ -28,12 +39,6 @@ function mouseInteractions(lock, isPressed) {
   });
 }
 
-// const rollBtn = document.querySelector("button");
-
-// let randomNum = 0;
-
-// rollBtn.addEventListener("click", () => {
-//   randomNum = Math.random();
-//   console.log(randomNum);
-//   return;
-// });
+//on click of roll
+//generate a random # 0-9
+//display the # in the mnum1 field

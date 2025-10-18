@@ -180,6 +180,9 @@ body {
 }
 
 .nums {
+}
+
+.nums-container {
   margin: 4px;
   background-color: #271527;
   border-radius: 4px;
