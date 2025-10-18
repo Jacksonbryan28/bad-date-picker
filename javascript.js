@@ -1,8 +1,11 @@
 const locks = document.querySelectorAll(".lock-icon");
 
-// let isHovered = false;
 locks.forEach((lock) => {
   let isPressed = false;
+  mouseInteractions(lock, isPressed);
+});
+
+function mouseInteractions(lock, isPressed) {
   lock.addEventListener("click", () => {
     if (isPressed === false) {
       lock.style.backgroundImage = "url(images/lock-icon-selected.svg)";
@@ -14,9 +17,6 @@ locks.forEach((lock) => {
     console.log("lock clicked");
   });
   lock.addEventListener("mouseenter", () => {
-    // if (isPressed === false) {
-    //   lock.style.backgroundImage = "url(images/lock-icon-hover.svg)";
-    // }
     lock.style.backgroundImage = "url(images/lock-icon-hover.svg)";
   });
   lock.addEventListener("mouseleave", () => {
@@ -26,7 +26,7 @@ locks.forEach((lock) => {
       lock.style.backgroundImage = "url(images/lock-icon-selected.svg)";
     }
   });
-});
+}
 
 // const rollBtn = document.querySelector("button");
 

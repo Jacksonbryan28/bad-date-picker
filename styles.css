@@ -159,7 +159,6 @@ body {
 
 .datewrapergrid {
   display: grid;
-  /* grid: repeat(3, 50px) / repeat(10, 50px); */
 
   grid-template-columns: 50px 50px 20px 50px 50px 20px 50px 50px 50px 50px;
   grid-template-rows: 50px 60px 50px;
@@ -185,6 +184,9 @@ body {
   background-color: #271527;
   border-radius: 4px;
   justify-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lock-icon {
