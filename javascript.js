@@ -16,12 +16,7 @@ locks.forEach((lock) => {
   mouseInteractions(lock, isPressed);
 });
 
-// rollBtn.addEventListener("click", () => {
-//   randomNum = Math.floor(Math.random() * 10);
-//   console.log(randomNum);
-//   num1.textContent = randomNum;
-//   return;
-// });
+
 
 rollBtn.addEventListener("click", () => {
   allData.allDisplayNums.forEach((num) => {
@@ -53,6 +48,14 @@ function mouseInteractions(lock, isPressed) {
   });
 }
 
-//on click of roll
-//generate a random # 0-9
-//display the # in the mnum1 field
+
+
+
+
+//Single # random number
+// rollBtn.addEventListener("click", () => {
+//   randomNum = Math.floor(Math.random() * 10);
+//   console.log(randomNum);
+//   num1.textContent = randomNum;
+//   return;
+// });
