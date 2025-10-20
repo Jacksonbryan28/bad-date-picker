@@ -20,8 +20,10 @@ rollBtn.addEventListener("click", () => {
   allData.allDisplayNums.forEach((num, index) => {
     //if index of num and  lockstatusarray = false, roll
     //else if lockstatusarray is true = no roll
-    num.textContent = Math.floor(Math.random() * 10);
-    console.log(num + " num = " + num.textContent);
+    if (locksStatusAry[index] === false) {
+      num.textContent = Math.floor(Math.random() * 10);
+      console.log(num + " num = " + num.textContent);
+    }
   });
 });
 
@@ -30,9 +32,17 @@ function mouseInteractions(lock, isPressed, index) {
     if (isPressed === false) {
       lock.style.backgroundImage = "url(images/lock-icon-selected.svg)";
       isPressed = true;
+      locksStatusAry[index] = true;
+      console.log(
+        "lockStatusAry index " + index + " =  " + locksStatusAry[index]
+      );
     } else if (isPressed === true) {
       lock.style.backgroundImage = "url(images/lock-icon.svg)";
       isPressed = false;
+      locksStatusAry[index] = false;
+      console.log(
+        "lockStatusAry index " + index + " =  " + locksStatusAry[index]
+      );
     }
     console.log("lock clicked");
     console.log("Lock index = " + index);
