@@ -1,7 +1,7 @@
 const locks = document.querySelectorAll(".lock-icon");
 const rollBtn = document.querySelector("button");
-const num1 = document.querySelector("#num1");
 const nums = document.querySelectorAll(".nums");
+let locksStatusAry = [false, false, false, false, false, false, false, false];
 
 let randomNum = 0;
 
@@ -11,19 +11,21 @@ const allData = {
   allRandomNums: 0,
 };
 
-locks.forEach((lock) => {
+locks.forEach((lock, index) => {
   let isPressed = false;
-  mouseInteractions(lock, isPressed);
+  mouseInteractions(lock, isPressed, index);
 });
 
 rollBtn.addEventListener("click", () => {
-  allData.allDisplayNums.forEach((num) => {
+  allData.allDisplayNums.forEach((num, index) => {
+    //if index of num and  lockstatusarray = false, roll
+    //else if lockstatusarray is true = no roll
     num.textContent = Math.floor(Math.random() * 10);
     console.log(num + " num = " + num.textContent);
   });
 });
 
-function mouseInteractions(lock, isPressed) {
+function mouseInteractions(lock, isPressed, index) {
   lock.addEventListener("click", () => {
     if (isPressed === false) {
       lock.style.backgroundImage = "url(images/lock-icon-selected.svg)";
@@ -33,6 +35,7 @@ function mouseInteractions(lock, isPressed) {
       isPressed = false;
     }
     console.log("lock clicked");
+    console.log("Lock index = " + index);
   });
   lock.addEventListener("mouseenter", () => {
     lock.style.backgroundImage = "url(images/lock-icon-hover.svg)";
@@ -45,11 +48,3 @@ function mouseInteractions(lock, isPressed) {
     }
   });
 }
-
-//Single # random number
-// rollBtn.addEventListener("click", () => {
-//   randomNum = Math.floor(Math.random() * 10);
-//   console.log(randomNum);
-//   num1.textContent = randomNum;
-//   return;
-// });
