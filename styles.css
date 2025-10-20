@@ -185,9 +185,9 @@ body {
   border: 5px white solid;
 }
 
-.legend {
+/* .legend {
   display: grid;
-}
+} */
 
 .datewrapergrid {
   display: grid;
