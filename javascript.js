@@ -27,6 +27,7 @@ rollBtn.addEventListener("click", () => {
 });
 
 submitBtn.addEventListener("click", () => {
+  //alert saying the date - first have to translate using the key
   console.log("Submit button pressed");
   alert(
     "Your Birthday is: " +
@@ -41,7 +42,6 @@ submitBtn.addEventListener("click", () => {
       KEY.indexOf(nums[6].textContent) +
       KEY.indexOf(nums[7].textContent)
   );
-  //alert saying the date - first have to translate using the key
 });
 
 function mouseInteractions(lock, isPressed, index) {

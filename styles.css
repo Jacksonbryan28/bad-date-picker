@@ -210,6 +210,8 @@ body {
 }
 
 .nums {
+  text-shadow: 0 0 7px #fff, 0 0 21px #bc13fe, 0 0 42px #bc13fe,
+    0 0 82px #bc13fe;
 }
 
 .nums-container {
