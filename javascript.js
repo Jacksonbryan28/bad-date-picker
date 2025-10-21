@@ -1,5 +1,5 @@
 const locks = document.querySelectorAll(".lock-icon");
-const rollBtn = document.querySelector("button");
+const rollBtn = document.querySelector("#rollbtn");
 const nums = document.querySelectorAll(".nums");
 let locksStatusAry = [false, false, false, false, false, false, false, false];
 

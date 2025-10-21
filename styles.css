@@ -135,6 +135,10 @@ h6 {
   font-family: "Stray";
 }
 
+.sidepanel {
+  overflow-y: scroll;
+}
+
 .sidepanel > * {
   font-family: "Orbitron";
 }
@@ -143,6 +147,7 @@ h6 {
   display: grid;
   grid: 50px 50px 50px / repeat(auto-fit, minmax(60px, 1fr));
   grid-auto-rows: 50px;
+  margin-top: var(--pad-l, 24px);
   border: white solid 1px;
   background-image: url(images/unknownbg.svg);
 }
@@ -225,10 +230,40 @@ body {
 }
 
 .lock-icon {
+  all: unset;
+  cursor: pointer;
   width: 23px;
   height: 32px;
   background-image: url(images/lock-icon.svg);
   margin-top: 4px;
+}
+.lock-icon:focus {
+  outline: revert;
+}
+
+.roll {
+  all: unset;
+  font-family: "Stray";
+  color: #d4b9d4;
+  border: #d4b9d4, solid;
+  padding: var(--pad-xs) var(--pad-xl);
+}
+.roll:hover {
+  cursor: pointer;
+  color: #ffffff;
+  text-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+}
+.roll:active {
+  background-color: #271527;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 0.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+}
+
+.roll:focus {
+  outline: revert;
 }
 /* .lock-icon:hover {
   background-image: url(images/lock-icon-hover.svg);
