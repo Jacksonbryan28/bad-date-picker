@@ -5,11 +5,11 @@ let locksStatusAry = [false, false, false, false, false, false, false, false];
 
 let randomNum = 0;
 
-const allData = {
-  allLocks: locks,
-  allDisplayNums: nums,
-  allRandomNums: 0,
-};
+// const allData = {
+//   allLocks: locks,
+//   allDisplayNums: nums,
+//   allRandomNums: 0,
+// };
 
 locks.forEach((lock, index) => {
   let isPressed = false;
@@ -17,12 +17,12 @@ locks.forEach((lock, index) => {
 });
 
 rollBtn.addEventListener("click", () => {
-  allData.allDisplayNums.forEach((num, index) => {
+  // allData.allDisplayNums.forEach((num, index) => {
+  nums.forEach((num, index) => {
     //if index of num and  lockstatusarray = false, roll
-    //else if lockstatusarray is true = no roll
     if (locksStatusAry[index] === false) {
       num.textContent = Math.floor(Math.random() * 10);
-      console.log(num + " num = " + num.textContent);
+      console.log(index + " num = " + num.textContent);
     }
   });
 });
