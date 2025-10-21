@@ -15,6 +15,7 @@
   font-display: swap;
 }
 
+/*Thanks Josh Comeau for the CSS reset https://www.joshwcomeau.com/css/custom-css-reset/ */
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -108,7 +109,6 @@ h6 {
       300px,
       500px
     );
-  /* grid: calc(100vh - 2em) / 2fr 1fr; */
 
   padding: var(--pad-xl, 1em);
   gap: var(--pad-m, 1.25em);
@@ -191,10 +191,6 @@ body {
   border: 5px white solid;
 }
 
-/* .legend {
-  display: grid;
-} */
-
 .datewrapergrid {
   display: grid;
 
@@ -202,10 +198,6 @@ body {
   grid-template-rows: 50px 60px 50px;
   justify-items: center;
   margin: var(--pad-l);
-  /* grid-template-areas:
-    "m1 m2 slash1 d1 d2 slash2 y1 y2 y3 y4"
-    "mnum1 mnum2 . dnum1 dnum2 . ynum1 ynum2 ynum3 ynum4"
-    "mlock1 mlock2 . dlock1 dlock2 . ylock1 ylock2 ylock3 ylock4"; */
 }
 .skip1 {
   grid-column: 3;
@@ -271,89 +263,3 @@ body {
   display: flex;
   gap: var(--pad-l);
 }
-/* .lock-icon:hover {
-  background-image: url(images/lock-icon-hover.svg);
-}
-.lock-icon:active {
-  background-image: url(images/lock-icon-selected.svg);
-} */
-
-/* #m1 {
-  
-}
-#m2 {
-  
-}
-#slash1 {
- 
-}
-#d1 {
- 
-}
-#d2 {
- 
-}
-#slash2 {
- 
-}
-#y1 {
-
-}
-#y2 {
-  
-}
-#y3 {
- 
-}
-#y4 {
-
-}
-
-#mnum1 {
-
-}
-#mnum2 {
- 
-}
-#dnum1 {
- 
-}
-#dnum2 {
- 
-}
-#ynum1 {
-
-}
-#ynum2 {
-
-}
-#ynum3 {
-
-}
-#ynum4 {
- 
-}
-#mlock1 {
-  
-}
-#mlock2 {
- 
-}
-#dlock1 {
-  
-}
-#dlock2 {
-  
-}
-#ylock1 {
-  
-}
-#ylock2 {
-  
-}
-#ylock3 {
-  
-}
-#ylock4 {
-  
-}  */
