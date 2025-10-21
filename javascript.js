@@ -28,7 +28,19 @@ rollBtn.addEventListener("click", () => {
 
 submitBtn.addEventListener("click", () => {
   console.log("Submit button pressed");
-  alert(nums[0].textContent + nums[1].textContent);
+  alert(
+    "Your Birthday is: " +
+      KEY.indexOf(nums[0].textContent) +
+      KEY.indexOf(nums[1].textContent) +
+      "/" +
+      KEY.indexOf(nums[2].textContent) +
+      KEY.indexOf(nums[3].textContent) +
+      "/" +
+      KEY.indexOf(nums[4].textContent) +
+      KEY.indexOf(nums[5].textContent) +
+      KEY.indexOf(nums[6].textContent) +
+      KEY.indexOf(nums[7].textContent)
+  );
   //alert saying the date - first have to translate using the key
 });
 
