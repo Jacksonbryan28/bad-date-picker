@@ -1,7 +1,9 @@
 const locks = document.querySelectorAll(".lock-icon");
 const rollBtn = document.querySelector("#rollbtn");
 const nums = document.querySelectorAll(".nums");
+const submitBtn = document.querySelector("#submit");
 let locksStatusAry = [false, false, false, false, false, false, false, false];
+const KEY = ["9", "C", "F", "J", "K", "Q", "V", "W", "X", "8"];
 
 let randomNum = 0;
 
@@ -14,10 +16,20 @@ rollBtn.addEventListener("click", () => {
   nums.forEach((num, index) => {
     //if index of num and  lockstatusarray = false, roll
     if (locksStatusAry[index] === false) {
-      num.textContent = Math.floor(Math.random() * 10);
+      randomNum = Math.floor(Math.random() * 10);
+      num.textContent = KEY[randomNum];
+
+      // num.textContent = Math.floor(Math.random() * 10);
+      console.log(index + " RandomNum = " + randomNum);
       console.log(index + " num = " + num.textContent);
     }
   });
+});
+
+submitBtn.addEventListener("click", () => {
+  console.log("Submit button pressed");
+  alert(nums[0].textContent + nums[1].textContent);
+  //alert saying the date - first have to translate using the key
 });
 
 function mouseInteractions(lock, isPressed, index) {
