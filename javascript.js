@@ -5,19 +5,12 @@ let locksStatusAry = [false, false, false, false, false, false, false, false];
 
 let randomNum = 0;
 
-// const allData = {
-//   allLocks: locks,
-//   allDisplayNums: nums,
-//   allRandomNums: 0,
-// };
-
 locks.forEach((lock, index) => {
   let isPressed = false;
   mouseInteractions(lock, isPressed, index);
 });
 
 rollBtn.addEventListener("click", () => {
-  // allData.allDisplayNums.forEach((num, index) => {
   nums.forEach((num, index) => {
     //if index of num and  lockstatusarray = false, roll
     if (locksStatusAry[index] === false) {
