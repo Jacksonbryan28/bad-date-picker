@@ -276,5 +276,9 @@ body {
 textarea {
   width: 100%;
   min-height: 150px;
+  max-height: 5000px;
   resize: vertical;
+
+  background-color: #271527;
+  color: #fff;
 }
