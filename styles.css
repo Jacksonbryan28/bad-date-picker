@@ -131,6 +131,7 @@ h6 {
   align-items: center;
   overflow-y: scroll;
   min-height: 100%;
+  user-select: none;
 }
 
 .lgrid > * {
@@ -283,4 +284,3 @@ textarea {
   background-color: #271527;
   color: #fff;
 }
-
