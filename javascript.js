@@ -61,8 +61,8 @@ function mouseInteractions(lock, isPressed, index) {
       //   "lockStatusAry index " + index + " =  " + locksStatusAry[index]
       // );
     }
-    console.log("lock clicked");
-    console.log("Lock index = " + index);
+    // console.log("lock clicked");
+    // console.log("Lock index = " + index);
   });
   lock.addEventListener("mouseenter", () => {
     lock.style.backgroundImage = "url(images/lock-icon-hover.svg)";
