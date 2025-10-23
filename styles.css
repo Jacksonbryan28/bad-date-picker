@@ -130,6 +130,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
+  min-height: 100%;
 }
 
 .lgrid > * {
@@ -282,3 +283,4 @@ textarea {
   background-color: #271527;
   color: #fff;
 }
+
