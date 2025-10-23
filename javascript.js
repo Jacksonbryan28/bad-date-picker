@@ -20,15 +20,15 @@ rollBtn.addEventListener("click", () => {
       num.textContent = KEY[randomNum];
 
       // num.textContent = Math.floor(Math.random() * 10);
-      console.log(index + " RandomNum = " + randomNum);
-      console.log(index + " num = " + num.textContent);
+      // console.log(index + " RandomNum = " + randomNum);
+      // console.log(index + " num = " + num.textContent);
     }
   });
 });
 
 submitBtn.addEventListener("click", () => {
   //alert saying the date - first have to translate using the key
-  console.log("Submit button pressed");
+  // console.log("Submit button pressed");
   alert(
     "Your Birthday is: " +
       KEY.indexOf(nums[0].textContent) +
@@ -50,16 +50,16 @@ function mouseInteractions(lock, isPressed, index) {
       lock.style.backgroundImage = "url(images/lock-icon-selected.svg)";
       isPressed = true;
       locksStatusAry[index] = true;
-      console.log(
-        "lockStatusAry index " + index + " =  " + locksStatusAry[index]
-      );
+      // console.log(
+      //   "lockStatusAry index " + index + " =  " + locksStatusAry[index]
+      // );
     } else if (isPressed === true) {
       lock.style.backgroundImage = "url(images/lock-icon.svg)";
       isPressed = false;
       locksStatusAry[index] = false;
-      console.log(
-        "lockStatusAry index " + index + " =  " + locksStatusAry[index]
-      );
+      // console.log(
+      //   "lockStatusAry index " + index + " =  " + locksStatusAry[index]
+      // );
     }
     console.log("lock clicked");
     console.log("Lock index = " + index);
